@@ -1,0 +1,67 @@
+package readers;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import managers.FileReaderManager;
+import utils.Log;
+
+
+public class ExcelReader {
+	
+	public static HashMap<String, HashMap<String, String>> ReadExcelFile(String sheetName)
+	{
+		HashMap<String, HashMap<String, String>> sheetData = null;
+		try
+		{
+			FileInputStream fs = new FileInputStream(FileReaderManager.getInstance().getConfigReader().getExcelPath());
+			try (XSSFWorkbook wb = new XSSFWorkbook(fs)) {
+				XSSFSheet sheet = wb.getSheet(sheetName);
+				sheetData = ReadSheet(sheet);
+				wb.close();
+			}
+		}
+		catch(IOException ex)
+		{
+			Log.error(ex.getMessage());
+		}
+		
+		return sheetData;
+	}
+	
+	private static HashMap<String, HashMap<String, String>> ReadSheet(Sheet sheet) 
+	{
+		Row row;
+		Cell cell;
+
+		int rowCount = sheet.getLastRowNum();
+		
+		HashMap<String, HashMap<String, String>> excelRows = new HashMap<>();
+		for(int currentRow = 1; currentRow <= rowCount; currentRow ++)
+		{
+			row = sheet.getRow(currentRow);
+			String rowHeader = sheet.getRow(currentRow).getCell(0).getStringCellValue();
+			
+			int noOfCols = row.getLastCellNum();
+			
+			HashMap<String, String> colData = new HashMap<>();
+			for(int currentCol = 0; currentCol < noOfCols ; currentCol ++)
+			{
+				cell = row.getCell(currentCol);
+				String columnHeader = sheet.getRow(sheet.getFirstRowNum()).getCell(currentCol).getStringCellValue();
+				colData.put(columnHeader, cell.getStringCellValue());
+			}
+			excelRows.put(rowHeader, colData);
+		}
+
+		return excelRows;
+	}
+
+}
