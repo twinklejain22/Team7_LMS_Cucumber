@@ -29,8 +29,8 @@ public class HomePage {
 	
 	public void VerifyHomePage()
 	{
-		Assert.assertEquals(driver.getTitle(), FileReaderManager.getInstance().getConfigReader().getHomePageHeader());
-		Log.info("Verified that user is LMS Home Page");
+		Assert.assertEquals(driver.getTitle(), FileReaderManager.getInstance().getConfigReader().getHomePageTitle());
+		Log.info("Verified that user is on LMS Home Page");
 	}
 	
 	public void VerifyLoginBtn()
