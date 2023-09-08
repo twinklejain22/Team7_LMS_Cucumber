@@ -80,11 +80,47 @@ public class ConfigReader {
 			throw new RuntimeException("appUrl not specified in the Configuration.properties file.");
 	}
 	
-	public String getHomePageHeader() {
-		String path = properties.getProperty("homePageHeader");
+	// Home Page
+	
+	public String getHomePageTitle() {
+		String path = properties.getProperty("homePageTitle");
 		if (path != null)
 			return path;
 		else
-			throw new RuntimeException("homePageHeader not specified in the Configuration.properties file.");
+			throw new RuntimeException("homePageTitle not specified in the Configuration.properties file.");
+	}
+	
+	// Login Page
+	
+	public String getLoginPageTitle() {
+		String path = properties.getProperty("loginPageTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("loginPageTitle not specified in the Configuration.properties file.");
+	}
+	
+	public String getLoginPageHeader() {
+		String path = properties.getProperty("loginPageHeader");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("loginPageHeader not specified in the Configuration.properties file.");
+	}
+	
+	public String getUsernameDefaultText() {
+		String path = properties.getProperty("userNameDefaultText");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("userNameDefaultText not specified in the Configuration.properties file.");
+	}
+	
+	public String getPasswordDefaultText() {
+		String path = properties.getProperty("passwordDefaultText");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("passwordDefaultText not specified in the Configuration.properties file.");
 	}
 }
