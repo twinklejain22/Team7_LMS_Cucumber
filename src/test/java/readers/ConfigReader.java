@@ -147,4 +147,13 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("dashboardPageTitle not specified in the Configuration.properties file.");
 	}
+	
+	public String getUserTableExpectedHeaders()
+	{
+		String path = properties.getProperty("userTableExpectedHeaders");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("userTableExpectedHeaders not specified in the Configuration.properties file.");
+	}
 }
