@@ -1,5 +1,8 @@
 package utils;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,6 +66,27 @@ public class ActionHelper {
 			return true;
 		else
 			return false;
+	}
+	
+	public void EnterText(WebElement element, String text)
+	{
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver; 
+		jsExecutor.executeScript("arguments[0].value='" + text + "'", element);  
+	}
+	
+	public void SortTableByColumn(WebElement element, String colName, String order) {
+		List<WebElement> columns = element.findElements(By.tagName("th"));
+		for (WebElement col : columns )
+		{
+			if (!colName.equalsIgnoreCase(col.getText()))
+			{
+				element.click();
+				String sortOrder = col.getAttribute("aria-sort");
+				if (!order.equalsIgnoreCase(sortOrder)) {
+					col.click();
+				}
+			}
+		}
 	}
 
 }

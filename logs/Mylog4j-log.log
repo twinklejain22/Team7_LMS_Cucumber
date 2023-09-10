@@ -1,0 +1,155 @@
+[INFO ] 2023-09-10 10:06:47.297 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-10 10:06:47.397 [main] Log - Verified that user is on LMS Home Page
+[INFO ] 2023-09-10 10:06:47.602 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-10 10:07:37.693 [main] Log - no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=116.0.5845.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '1.8.0_371'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9717c09e75c47dc8814f233cc8b1784c, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54723}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54723/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9717c09e75c47dc8814f233cc8b1784c
+[INFO ] 2023-09-10 10:07:37.915 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-10 10:08:27.956 [main] Log - no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=116.0.5845.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '1.8.0_371'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9717c09e75c47dc8814f233cc8b1784c, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54723}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54723/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9717c09e75c47dc8814f233cc8b1784c
+[INFO ] 2023-09-10 10:29:58.692 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.704 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 4 ms.
+[INFO ] 2023-09-10 10:29:58.708 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.708 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.712 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.713 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.715 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.715 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.723 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.746 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 22 ms.
+[INFO ] 2023-09-10 10:29:58.752 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.757 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 4 ms.
+[INFO ] 2023-09-10 10:29:58.761 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.761 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.763 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.763 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.768 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.769 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.770 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.771 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.775 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.776 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.776 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.776 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.792 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 12 ms.
+[INFO ] 2023-09-10 10:29:58.794 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+[INFO ] 2023-09-10 10:29:58.795 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.796 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.796 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.797 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:29:58.811 [main] Utils - [TestNG] Running:
+  /private/var/folders/pp/p_4g4ntn2qg8lyhtqw2919180000gn/T/testng-eclipse-665992681/testng-customsuite.xml
+
+[INFO ] 2023-09-10 10:29:58.866 [main] Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 5 ms.
+[WARN ] 2023-09-10 10:29:59.764 [main] Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
+[INFO ] 2023-09-10 10:29:59.878 [main] Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@4acb7ecc: 1 ms
+[INFO ] 2023-09-10 10:29:59.898 [main] Utils - [TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@79a04e5f: 19 ms
+[INFO ] 2023-09-10 10:30:00.021 [main] Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@5f2bd6d9: 122 ms
+[INFO ] 2023-09-10 10:30:00.022 [main] Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@7c847072: 0 ms
+[INFO ] 2023-09-10 10:30:00.041 [main] Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@2100d047: 17 ms
+[INFO ] 2023-09-10 10:30:00.055 [main] Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@1caa9eb6: 14 ms
+[INFO ] 2023-09-10 10:30:00.068 [main] Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@37c36608: 12 ms
+[INFO ] 2023-09-10 10:30:40.687 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.698 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 4 ms.
+[INFO ] 2023-09-10 10:30:40.702 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.703 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.706 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.707 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.712 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.712 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.715 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.737 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 22 ms.
+[INFO ] 2023-09-10 10:30:40.743 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.747 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 3 ms.
+[INFO ] 2023-09-10 10:30:40.749 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.750 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.754 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.754 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.758 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.761 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.764 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.765 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.770 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.771 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.771 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.771 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.781 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 8 ms.
+[INFO ] 2023-09-10 10:30:40.782 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+[INFO ] 2023-09-10 10:30:40.784 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.785 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.785 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.785 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:30:40.801 [main] Utils - [TestNG] Running:
+  /private/var/folders/pp/p_4g4ntn2qg8lyhtqw2919180000gn/T/testng-eclipse-1614799317/testng-customsuite.xml
+
+[INFO ] 2023-09-10 10:30:40.861 [main] Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 8 ms.
+[WARN ] 2023-09-10 10:30:41.770 [main] Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
+[INFO ] 2023-09-10 10:30:41.872 [main] Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@4acb7ecc: 0 ms
+[INFO ] 2023-09-10 10:30:41.898 [main] Utils - [TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@1ab5f08a: 26 ms
+[INFO ] 2023-09-10 10:30:42.017 [main] Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@3078cac: 119 ms
+[INFO ] 2023-09-10 10:30:42.019 [main] Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@f6de586: 1 ms
+[INFO ] 2023-09-10 10:30:42.036 [main] Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@4cc36c19: 17 ms
+[INFO ] 2023-09-10 10:30:42.053 [main] Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@51ec2856: 17 ms
+[INFO ] 2023-09-10 10:30:42.068 [main] Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@6ae62c7e: 14 ms
+[INFO ] 2023-09-10 10:31:40.742 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.753 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+[INFO ] 2023-09-10 10:31:40.756 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.756 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.759 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.759 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.762 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.763 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.773 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+[INFO ] 2023-09-10 10:31:40.799 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 24 ms.
+[INFO ] 2023-09-10 10:31:40.803 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.804 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.809 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.809 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.812 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.812 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.816 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.816 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.817 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.817 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.822 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.823 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.823 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.823 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.839 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 12 ms.
+[INFO ] 2023-09-10 10:31:40.842 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+[INFO ] 2023-09-10 10:31:40.844 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.844 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.844 [main] Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.845 [main] Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+[INFO ] 2023-09-10 10:31:40.860 [main] Utils - [TestNG] Running:
+  /private/var/folders/pp/p_4g4ntn2qg8lyhtqw2919180000gn/T/testng-eclipse-1787444304/testng-customsuite.xml
+
+[INFO ] 2023-09-10 10:31:40.919 [main] Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 6 ms.
+[INFO ] 2023-09-10 10:31:51.391 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-10 10:31:51.505 [main] Log - Verified that user is on LMS Home Page
+[INFO ] 2023-09-10 10:31:51.825 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-10 10:32:23.631 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-10 10:32:33.476 [main] Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@110318a7: 0 ms
+[INFO ] 2023-09-10 10:32:33.502 [main] Utils - [TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@2a2815cc: 25 ms
+[INFO ] 2023-09-10 10:32:33.601 [main] Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@7d7c05fa: 98 ms
+[INFO ] 2023-09-10 10:32:33.619 [main] Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@637c8632: 17 ms
+[INFO ] 2023-09-10 10:32:33.669 [main] Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@30ca66c5: 49 ms
+[INFO ] 2023-09-10 10:32:33.694 [main] Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@4ed19540: 25 ms
+[INFO ] 2023-09-10 10:32:33.739 [main] Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@2c6efee3: 44 ms

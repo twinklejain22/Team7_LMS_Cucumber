@@ -1,11 +1,15 @@
 package stepdefinitions;
 
+import java.util.HashMap;
+
 import org.testng.Assert;
 
 import context.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import managers.FileReaderManager;
+import pages.DashboardPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utils.Log;
@@ -16,12 +20,17 @@ public class Login {
 	
 	HomePage homePage;
 	LoginPage loginPage;
+	DashboardPage dashboardPage;
+	
+	public static HashMap<String, HashMap<String, String>> loginExcelData;
 	
 	public Login(TestContext context)
 	{
 		testContext = context;
 		homePage = testContext.getPageObjectManager().getHomePage();
 		loginPage = testContext.getPageObjectManager().getLoginPage();
+		dashboardPage = testContext.getPageObjectManager().getDashboardPage();
+		loginExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("program");
 	}
 	
 	@Given("Admin is in home page")
@@ -223,7 +232,49 @@ public class Login {
 		}
 	}
 
+	@Given("Admin is in login page")
+	public void admin_is_in_login_page() 
+	{
+		try
+		{
+			loginPage.VerifyLoginPage();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
 
+	@When("Admin enter valid credentials and clicks login button")
+	public void admin_enter_valid_credentials_and_clicks_login_button() 
+	{
+		try
+		{
+			String userName = loginExcelData.get("Login_Valid").get("username");
+			String password = loginExcelData.get("Login_Valid").get("password");
+			loginPage.Login(userName, password);
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should land on dashboard page")
+	public void admin_should_land_on_dashboard_page() 
+	{
+		try
+		{
+			dashboardPage.VerifyDashboardPage();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
 
 
 }
