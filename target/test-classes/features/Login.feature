@@ -39,6 +39,7 @@ Feature: Login page verification
   Scenario: Verify Login is present
     Then Admin should be able to see login button 
     
+    
   @LoginPageLoginBtnAlignment
 	Scenario: Verify the alignment of the login button
 		Then Admin should see login button on the centre of the page

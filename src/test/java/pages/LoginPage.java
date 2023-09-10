@@ -22,6 +22,7 @@ public class LoginPage {
 	@FindBy(xpath = "//a[text()='Login']") WebElement linkForgot;
 	@FindBy(xpath = "//a[text()='Login']") WebElement linkReset;
 	
+	
 	public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
