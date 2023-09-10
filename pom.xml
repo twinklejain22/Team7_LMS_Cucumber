@@ -28,11 +28,31 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.1.0</version>
 
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.20.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.7</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
@@ -53,7 +73,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.9.0</version>
+			<version>4.11.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -87,12 +107,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>5.3.2</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
