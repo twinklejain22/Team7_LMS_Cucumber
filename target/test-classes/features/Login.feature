@@ -39,7 +39,6 @@ Feature: Login page verification
   Scenario: Verify Login is present
     Then Admin should be able to see login button 
     
-    
   @LoginPageLoginBtnAlignment
 	Scenario: Verify the alignment of the login button
 		Then Admin should see login button on the centre of the page
@@ -60,8 +59,13 @@ Feature: Login page verification
 	Scenario: Verify input descriptive test in password field
 		Then Admin should see password in gray color
 	
+	@LoginPageValidLogin
+	Scenario: Validate login with valid credentials
+		Given Admin is in login page
+		When Admin enter valid credentials and clicks login button 
+		Then Admin should land on dashboard page
 	
-#	Scenario: Validate login with valid credentials
+	
 #	Scenario: Validate login with invalid credentials
 #	Scenario: Validate login with valid credentials in username
 #	Scenario: Validate login with valid credentials in password
