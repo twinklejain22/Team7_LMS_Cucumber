@@ -1,5 +1,9 @@
 package utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -64,5 +68,119 @@ public class ActionHelper {
 		else
 			return false;
 	}
+	
+	public void EnterText(WebElement element, String text)
+	{
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver; 
+		jsExecutor.executeScript("arguments[0].value='" + text + "'", element);  
+	}
+	
+	public Boolean ValidateTableHeaders(WebElement element, List<String> lstExpectedHeaders)
+	{
+		List<WebElement> headers = element.findElements(By.tagName("th"));
+		List<String> headerText = new ArrayList<>();
+		
+		for (WebElement header : headers )
+		{
+			headerText.add(header.getText());
+		}
+		
+		if(headerText.equals(lstExpectedHeaders))
+			return true;
+		else
+			return false;
+	}
+	
+	public void SortTableByColumn(WebElement element, String colName, String order) 
+	{
+		List<WebElement> headers = element.findElements(By.tagName("th"));
+		for (WebElement col : headers )
+		{
+			if (!colName.equalsIgnoreCase(col.getText()))
+			{
+				element.click();
+				String sortOrder = col.getAttribute("aria-sort");
+				if (!order.equalsIgnoreCase(sortOrder)) {
+					col.click();
+				}
+			}
+		}
+	}
+	
+	public Boolean VerifyURL(String urlText)
+	{
+		if(driver.getCurrentUrl().contains(urlText))
+			return true;
+		else
+			return false;
+	}
+	
+	public Boolean ValidateFooterText(WebElement element, String expectedPartialText)
+	{
+		if(element.getText().contains(expectedPartialText) || element.getText().equalsIgnoreCase(expectedPartialText))
+				return true;
+		else
+			return false;
+	}
 
+	public Boolean IsEditButtonInTableRows(WebElement table)
+	{
+		List<WebElement> editButtons = table.findElements(By.xpath("//button[text()='Edit']"));
+		List<WebElement> rows = table.findElements(By.tagName("//tr"));
+		
+		if(editButtons.size() == rows.size())
+			return true;
+		else
+			return false;
+	}
+	
+	public Boolean IsEditButtonEnabledInTableRows(WebElement table)
+	{
+		List<WebElement> editButtons = table.findElements(By.xpath("//button[text()='Edit']"));
+		
+		Boolean areEnabled = true;
+		for(WebElement editButton : editButtons)
+		{
+			if(!editButton.isEnabled())
+				areEnabled = false;
+		}
+		
+		return areEnabled;
+	}
+	
+	public Boolean IsDeleteButtonInTableRows(WebElement table)
+	{
+		List<WebElement> deleteButtons = table.findElements(By.xpath("//button[text()='Delete']"));
+		List<WebElement> rows = table.findElements(By.tagName("//tr"));
+		
+		if(deleteButtons.size() == rows.size())
+			return true;
+		else
+			return false;
+	}
+	
+	public Boolean IsDeleteButtonEnabledInTableRows(WebElement table)
+	{
+		List<WebElement> deleteButtons = table.findElements(By.xpath("//button[text()='Edit']"));
+		
+		Boolean areEnabled = true;
+		for(WebElement deleteButton : deleteButtons)
+		{
+			if(!deleteButton.isEnabled())
+				areEnabled = false;
+		}
+		
+		return areEnabled;
+	}
+	
+	public Boolean IsCheckBoxInTableRows(WebElement table)
+	{
+		List<WebElement> checkboxes = table.findElements(By.xpath("//checkbox"));
+		List<WebElement> rows = table.findElements(By.tagName("//tr"));
+		
+		if(checkboxes.size() == rows.size())
+			return true;
+		else
+			return false;
+	}
 }
