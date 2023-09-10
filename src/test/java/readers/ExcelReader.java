@@ -16,7 +16,40 @@ import utils.Log;
 
 public class ExcelReader {
 	
-	public static HashMap<String, HashMap<String, String>> ReadExcelFile(String sheetName)
+	public static HashMap<String, Object> excelData;
+	
+	public void InitializeExcel()
+	{
+		excelData = LoadExcelData();
+	}
+	
+	public HashMap<String, Object> LoadExcelData()
+	{
+		HashMap<String, Object> excelData = new HashMap<>();
+		try
+		{
+			FileInputStream fs = new FileInputStream(FileReaderManager.getInstance().getConfigReader().getExcelPath());
+			try (XSSFWorkbook wb = new XSSFWorkbook(fs)) {
+				int noOfSheets = wb.getNumberOfSheets();
+				for(int i=0 ; i<noOfSheets ; i++)
+				{
+					HashMap<String, HashMap<String, String>> sheetData = null;
+					XSSFSheet sheet = wb.getSheetAt(i);
+					sheetData = ReadSheet(sheet);
+					excelData.put(wb.getSheetName(i), sheetData);
+				}
+				wb.close();
+			}
+		}
+		catch(IOException ex)
+		{
+			Log.error(ex.getMessage());
+		}
+		
+		return excelData;
+	}
+	
+	public HashMap<String, HashMap<String, String>> ReadExcelFile(String sheetName)
 	{
 		HashMap<String, HashMap<String, String>> sheetData = null;
 		try
@@ -36,7 +69,7 @@ public class ExcelReader {
 		return sheetData;
 	}
 	
-	private static HashMap<String, HashMap<String, String>> ReadSheet(Sheet sheet) 
+	private HashMap<String, HashMap<String, String>> ReadSheet(Sheet sheet) 
 	{
 		Row row;
 		Cell cell;
