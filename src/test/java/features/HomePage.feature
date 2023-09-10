@@ -18,3 +18,4 @@ Feature: Home Page Verification
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
     Then Admin should able to click the Login button
+    
