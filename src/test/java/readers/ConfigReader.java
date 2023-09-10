@@ -123,4 +123,12 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("passwordDefaultText not specified in the Configuration.properties file.");
 	}
+
+	public String getTextFieldFintColor() {
+		String path = properties.getProperty("defaultTextFontColor");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("defaultTextFontColor not specified in the Configuration.properties file.");
+	}
 }
