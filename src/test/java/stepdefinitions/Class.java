@@ -37,6 +37,12 @@ public class Class {
 	public void admin_should_see_url_with(String string) {
 	   
 	}
+	
+	@Then("Get the response time for navigation from dashboard page to manage class page")
+	public void get_the_response_time_for_navigation_from_dashboard_page_to_manage_class_page() {
+	    
+	}
+
 
 }
 
