@@ -8,7 +8,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import enums.BrowserType;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 
@@ -27,17 +26,14 @@ public class DriverManager {
 		        switch (browserType) {	 
 		        
 		        case FIREFOX : 
-		        	WebDriverManager.firefoxdriver().setup();
 	                driver.set(new FirefoxDriver());
 	                break;
 			    	
 		        case CHROME : 
-		        	WebDriverManager.chromedriver().setup();
 		            driver.set(new ChromeDriver());
 		    		break;
 		    		
 		        case EDGE : 
-		        	WebDriverManager.edgedriver().setup();
 	                driver.set(new EdgeDriver());
 	                break;
 		        }
