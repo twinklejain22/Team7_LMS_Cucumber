@@ -72,6 +72,14 @@ public class ConfigReader {
 			throw new RuntimeException("excelPath not specified in the Configuration.properties file.");
 	}
 	
+	public String getScreenshotPath() {
+		String path = properties.getProperty("screenshotPath");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("screenshotPath not specified in the Configuration.properties file.");
+	}
+	
 	public String getApplicationUrl() {
 		String path = properties.getProperty("appUrl");
 		if (path != null)
@@ -130,5 +138,22 @@ public class ConfigReader {
 			return path;
 		else
 			throw new RuntimeException("defaultTextFontColor not specified in the Configuration.properties file.");
+	}
+
+	public String getDashboardPageTitle() {
+		String path = properties.getProperty("dashboardPageTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("dashboardPageTitle not specified in the Configuration.properties file.");
+	}
+	
+	public String getUserTableExpectedHeaders()
+	{
+		String path = properties.getProperty("userTableExpectedHeaders");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("userTableExpectedHeaders not specified in the Configuration.properties file.");
 	}
 }

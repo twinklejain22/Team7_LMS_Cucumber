@@ -32,7 +32,7 @@ public class LoginPage {
 
 	public void VerifyLoginPage()
 	{
-		Assert.assertEquals(driver.getTitle(), FileReaderManager.getInstance().getConfigReader().getLoginPageTitle());
+		Assert.assertTrue(actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getLoginPageTitle()));
 		Log.info("Verified that user is on LMS Login Page");
 	}
 	
@@ -118,6 +118,15 @@ public class LoginPage {
 	{
 		Assert.assertTrue(linkReset.isDisplayed());
 		Log.info("Verified that Reset Password link is displayed");
+	}
+	
+	public void Login(String userName, String password)
+	{
+		actionHelper.EnterText(txtUserName, userName);
+		actionHelper.EnterText(txtPassword, password);
+		actionHelper.Click(btnLogin);
+		
+		Log.info("User enters username, password and clicks on Login button");
 	}
 
 }
