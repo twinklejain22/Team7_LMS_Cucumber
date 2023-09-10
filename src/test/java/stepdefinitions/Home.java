@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import org.testng.Assert;
+
 import context.TestContext;
 import pages.HomePage;
 import utils.Log;
@@ -35,6 +37,7 @@ public class Home {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 
@@ -48,6 +51,7 @@ public class Home {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 
@@ -61,6 +65,7 @@ public class Home {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 
@@ -74,6 +79,7 @@ public class Home {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 

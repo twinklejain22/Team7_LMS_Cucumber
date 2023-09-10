@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import org.testng.Assert;
+
 import context.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -27,11 +29,13 @@ public class Login {
 	{
 		try
 		{
+			homePage.GoToHomePage();
 			homePage.VerifyHomePage();
 		}
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 
@@ -45,6 +49,7 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 
@@ -58,11 +63,12 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 	
-	@Then("Admin should see correct in the header")
-	public void admin_should_see_correct_in_the_header() 
+	@Then("Admin should see correct text in the header")
+	public void admin_should_see_correct_text_in_the_header() 
 	{
 		try
 		{
@@ -71,6 +77,7 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 
@@ -85,6 +92,7 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 	
@@ -98,6 +106,7 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 	
@@ -111,6 +120,7 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
 	
@@ -125,7 +135,95 @@ public class Login {
 		catch(Exception ex)
 		{
 			Log.error(ex.getMessage());
+			Assert.fail();
 		}
 	}
+	
+	@Then("Admin should be able to see login button")
+	public void admin_should_be_able_to_see_login_button() 
+	{
+		try
+		{
+			loginPage.VerifyLoginBtn();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@Then("Admin should see login button on the centre of the page")
+	public void admin_should_see_login_button_on_the_centre_of_the_page() 
+	{
+		try
+		{
+			loginPage.VerifyLoginBtnCenterAlignment();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should see forgot username or password link")
+	public void admin_should_see_forgot_username_or_password_link() 
+	{
+		try
+		{
+			loginPage.VerifyForgotCredDisplayed();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should see reset password link")
+	public void admin_should_see_reset_password_link() 
+	{
+		try
+		{
+			loginPage.VerifyResetPasswordDisplayed();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should see user in gray color")
+	public void admin_should_see_user_in_gray_color() 
+	{
+		try
+		{
+			loginPage.VerifyUsernameFontColor();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should see password in gray color")
+	public void admin_should_see_password_in_gray_color() 
+	{
+		try
+		{
+			loginPage.VerifyPasswordFontColor();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+
+
 
 }
