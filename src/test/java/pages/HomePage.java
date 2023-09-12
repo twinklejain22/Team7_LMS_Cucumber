@@ -17,6 +17,8 @@ public class HomePage {
 	
 	@FindBy(xpath = "//a[text()='Login']") WebElement btnLogin;
 	
+	
+	
 	public HomePage(WebDriver driver)
 	{
 		this.driver = driver;

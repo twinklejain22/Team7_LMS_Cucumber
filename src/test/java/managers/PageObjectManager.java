@@ -9,6 +9,7 @@ public class PageObjectManager {
 	private WebDriver driver;
 	private HomePage homePage;
 	private LoginPage loginPage;
+	private StudentPage studentPage;
 	
 	public PageObjectManager(WebDriver driver) 
 	{
@@ -24,5 +25,8 @@ public class PageObjectManager {
 	{
 		return (loginPage == null) ? loginPage = new LoginPage(driver) : loginPage;
 	}
-
+	public StudentPage getStudentPage()
+	{
+		return(studentPage==null)? studentPage=new StudentPage(driver): studentPage;
+	}
 }
