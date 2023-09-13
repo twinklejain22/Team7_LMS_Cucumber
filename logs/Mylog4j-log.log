@@ -361,3 +361,36 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
 Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-12 22:44:03.361 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-12 22:44:05.392 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[ERROR] 2023-09-12 23:27:50.067 [main] Log - no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69f8c0c3288c2ffeeb8e42074ec1aafa, get {url=https://dsportalapp.herokuapp.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50076}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50076/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69f8c0c3288c2ffeeb8e42074ec1aafa
+[INFO ] 2023-09-13 08:52:44.775 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-13 08:52:53.094 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-13 11:09:04.529 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-13 11:09:07.701 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-13 14:35:43.749 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-13 14:35:47.498 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver

@@ -1,6 +1,8 @@
 package stepdefinitions;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.testng.Assert;
 
@@ -14,11 +16,10 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.PaginationPage;
 import pages.UserPage;
-import utils.DynamicValues;
 import utils.Log;
 
-public class EditUser {
-
+public class DeleteMultipleUsers {
+	
 	TestContext testContext;
 	
 	HomePage homePage;
@@ -27,14 +28,11 @@ public class EditUser {
 	PaginationPage paginationPage;
 	UserPage userPage;
 	
-	public static HashMap<String, String> user;
-	public static String userAllDetails;
-	public static String userOnlyMandatoryDetails;
-	
 	public static HashMap<String, HashMap<String, String>> loginExcelData;
 	public static HashMap<String, HashMap<String, String>> userExcelData;
+	static List<String> usersToDelete = new ArrayList<>();
 	
-	public EditUser(TestContext context)
+	public DeleteMultipleUsers(TestContext context)
 	{
 		testContext = context;
 		homePage = testContext.getPageObjectManager().getHomePage();
@@ -47,8 +45,8 @@ public class EditUser {
 		userExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("user");
 	}
 	
-	@Given("Admin is on dashboard page after Log in")
-	public void admin_is_on_dashboard_page_after_log_in() 
+	@Given("Admin is on dashboard after Log in to LMS")
+	public void admin_is_on_dashboard_after_log_in_to_lms() 
 	{
 		try
 		{
@@ -68,8 +66,8 @@ public class EditUser {
 		}
 	}
 
-	@When("Admin clicks {string} from the navigation panel")
-	public void admin_clicks_from_the_navigation_panel(String page) 
+	@When("Admin selects {string} from the navigation panel on Dashboard")
+	public void admin_selects_from_the_navigation_panel_on_dashboard(String page) 
 	{
 		try
 		{
@@ -82,12 +80,12 @@ public class EditUser {
 		}
 	}
 
-	@Given("The edit icon on row level in data table is enabled")
-	public void the_edit_icon_on_row_level_in_data_table_is_enabled() 
+	@Given("None of the checkboxes in data table are selected")
+	public void none_of_the_checkboxes_in_data_table_are_selected() 
 	{
 		try
 		{
-			userPage.VerifyEditButtonInEachRow();
+			userPage.VerifyNoCheckBoxesSelectedInTable();
 		}
 		catch(Exception ex)
 		{
@@ -96,12 +94,12 @@ public class EditUser {
 		}
 	}
 
-	@When("Admin clicks the edit icon")
-	public void admin_clicks_the_edit_icon() 
+	@Then("The delete multiple icon should be disabled")
+	public void the_delete_multiple_icon_should_be_disabled() 
 	{
 		try
 		{
-			userPage.ClickEditForUser(AddNewUser.userOnlyMandatoryDetails);
+			userPage.VerifyDeleteMutipleBtnDisabled();
 		}
 		catch(Exception ex)
 		{
@@ -110,12 +108,26 @@ public class EditUser {
 		}
 	}
 
-	@Then("A pop up with User details appears for Edit")
-	public void a_pop_up_with_user_details_appears_for_edit() 
+	@Given("One of the checkbox or row is selected")
+	public void one_of_the_checkbox_or_row_is_selected() 
 	{
 		try
 		{
-			userPage.VerifyUserDetailsPopUpOpen();
+			userPage.SelectCheckBoxInUserTable(EditUser.userAllDetails);
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@When("Click delete multiple icon")
+	public void click_delete_multiple_icon() 
+	{
+		try
+		{
+			userPage.ClickMultipleDeleteButton();
 		}
 		catch(Exception ex)
 		{
@@ -124,12 +136,14 @@ public class EditUser {
 		}
 	}
 
-	@Given("Admin is on User Details pop up for Edit")
-	public void admin_is_on_user_details_pop_up_for_edit() 
+	@Then("The respective row in the data table is deleted")
+	public void the_respective_row_in_the_data_table_is_deleted() 
 	{
 		try
 		{
-			userPage.VerifyUserDetailsPopUpOpen();
+			userPage.ClickYesOnDeleteAlert();
+			userPage.VerifyDeletionConfirmation();
+			userPage.VerifyUserDeleted(EditUser.userAllDetails);
 		}
 		catch(Exception ex)
 		{
@@ -138,49 +152,17 @@ public class EditUser {
 		}
 	}
 
-	@When("Update the fields with values as per {string} and click submit")
-	public void update_the_fields_with_values_as_per_and_click_submit(String key) 
+	@Given("Two checkboxes or row is selected")
+	public void two_checkboxes_or_row_is_selected() 
 	{
 		try
 		{
-			user = userExcelData.get(key);
-			if(key.equals("User_MissingPhone"))
-				user.put("Phone", "");
-			else
-				user.put("Phone", String.valueOf(DynamicValues.PhoneNumber()));
-			if(! user.get("First Name").isBlank())
-				user.replace("First Name", user.get("First Name") + DynamicValues.SerialNumber());
-			
-			if(key.equals("User_EditMandatoryFields"))
-				userOnlyMandatoryDetails = user.get("First Name");
-			if(key.equals("User_EditAllFields"))
-				userAllDetails = user.get("First Name");
-			
-			userPage.EnterUserDetails(user);
-			userPage.ClickOnSubmitButton();
-		}
-		catch(Exception ex)
-		{
-			Log.error(ex.getMessage());
-			Assert.fail();
-		}
-	}
-
-	@Then("Valid values should get updated or error should appear {string}")
-	public void valid_values_should_get_updated_or_error_should_appear(String key) 
-	{
-		try
-		{
-			if(user.get("First Name").isBlank() || user.get("Last Name").isBlank()
-				|| user.get("Phone").isBlank() || user.get("Location").isBlank()
-				|| user.get("Role Status").isBlank() || user.get("User Role").isBlank()
-				|| user.get("Visa Status").isBlank() || key.contains("Invalid"))
+			List<String> usersToDelete = new ArrayList<>();
+			usersToDelete.add(AddNewUser.userForMultiDelete1);
+			usersToDelete.add(AddNewUser.userForMultiDelete2);
+			for(String user : usersToDelete)
 			{
-				userPage.VerifyMissingMandatoryErrorMessage(user.get("Message"));
-			}
-			else
-			{
-				userPage.VerifyUserAdded(user);
+				userPage.SelectCheckBoxInUserTable(user);
 			}
 		}
 		catch(Exception ex)
@@ -189,6 +171,37 @@ public class EditUser {
 			Assert.fail();
 		}
 	}
+	
+	@When("Click on delete multiple icon")
+	public void click_on_delete_multiple_icon() 
+	{
+		try
+		{
+			userPage.ClickMultipleDeleteButton();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
 
-
+	@Then("The respective rows in the data table is deleted")
+	public void the_respective_rows_in_the_data_table_is_deleted() 
+	{
+		try
+		{
+			userPage.ClickYesOnDeleteAlert();
+			userPage.VerifyDeletionConfirmation();
+			for(String user : usersToDelete)
+			{
+				userPage.VerifyUserDeleted(user);
+			}
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
 }

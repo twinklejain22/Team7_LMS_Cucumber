@@ -35,6 +35,8 @@ Feature: Add new user
       | key                    |
       | User_MandatoryFields   |
       | User_AllFields         |
+      | User_ForMultiDelete1   |
+      | User_ForMultiDelete2   |
       | User_MissingFirstName  |
       | User_MissingLastName   |
       | User_MissingLocation   |
