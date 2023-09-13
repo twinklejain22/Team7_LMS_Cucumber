@@ -122,11 +122,21 @@ public class LoginPage {
 	
 	public void Login(String userName, String password)
 	{
-		actionHelper.EnterText(txtUserName, userName);
-		actionHelper.EnterText(txtPassword, password);
-		actionHelper.Click(btnLogin);
+		EnterUsernamePassword(userName, password);
+		ClickLoginBtn();
 		
 		Log.info("User enters username, password and clicks on Login button");
 	}
-
+	
+	public void EnterUsernamePassword(String userName, String password)
+	{
+		actionHelper.EnterText(txtUserName, userName);
+		actionHelper.EnterText(txtPassword, password);
+	}
+	
+	public void ClickLoginBtn()
+	{
+		actionHelper.Click(btnLogin);
+	}
+	
 }
