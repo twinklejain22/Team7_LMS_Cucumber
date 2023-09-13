@@ -200,7 +200,7 @@ public class ActionHelper {
 	
 	public Boolean IsCheckBoxInTableRows(WebElement table)
 	{
-		List<WebElement> checkboxes = table.findElements(By.xpath("//checkbox"));
+		List<WebElement> checkboxes = table.findElements(By.xpath("//input[type='checkbox']\""));
 		List<WebElement> rows = table.findElements(By.tagName("//tr"));
 		
 		if(checkboxes.size() == rows.size())
@@ -303,7 +303,83 @@ public class ActionHelper {
 			}
 		}
 		
-		WebElement editButton = reqRow.findElement(By.xpath("//button[text()='User'])"));
+		WebElement editButton = reqRow.findElement(By.xpath("//button[text()='Edit'])"));
 		Click(editButton);
+	}
+	
+	public Boolean VerifyTableIsEmpty(WebElement table)
+	{
+		List<WebElement> rows = table.findElements(By.tagName("//tr"));
+		if(rows == null || rows.size() == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public void ClickDeleteInRow(WebElement table, String value)
+	{
+		WebElement reqRow = null;
+		List<WebElement> rows = table.findElements(By.tagName("//tr"));
+		for(WebElement row : rows)
+		{
+			List<WebElement> cells = row.findElements(By.tagName("//td"));
+			for(WebElement cell : cells)
+			{
+				if(cell.getText().equalsIgnoreCase(value))
+				{
+					reqRow = row;
+					break;
+				}
+			}
+			if(reqRow != null)
+			{
+				break;
+			}
+		}
+		
+		WebElement deleteButton = reqRow.findElement(By.xpath("//button[text()='Delete'])"));
+		Click(deleteButton);
+	}
+	
+	public Boolean VerifyNoCheckBoxesSelected(WebElement table)
+	{
+		Boolean notSelected = true;
+		List<WebElement> checkboxes = table.findElements(By.xpath("//input[type='checkbox']"));
+		for(WebElement checkbox : checkboxes)
+		{
+			if(checkbox.isSelected())
+			{
+				notSelected = false;
+				break;
+			}
+		}
+		
+		return notSelected;
+	}
+	
+	public void ClickCheckboxInTable(WebElement table, String text)
+	{
+			WebElement reqRow = null;
+			List<WebElement> rows = table.findElements(By.tagName("//tr"));
+			for(WebElement row : rows)
+			{
+				List<WebElement> cells = row.findElements(By.tagName("//td"));
+				for(WebElement cell : cells)
+				{
+					if(cell.getText().equalsIgnoreCase(text))
+					{
+						reqRow = row;
+						break;
+					}
+				}
+				if(reqRow != null)
+				{
+					break;
+				}
+			}
+			
+			WebElement checkbox = reqRow.findElement(By.xpath("//input[type='checkbox']"));
+			Click(checkbox);
+		
 	}
 }
