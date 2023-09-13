@@ -27,7 +27,11 @@ public class AddNewUser {
 	PaginationPage paginationPage;
 	UserPage userPage;
 	
-	static HashMap<String, String> user;
+	public static HashMap<String, String> user;
+	public static String userAllDetails;
+	public static String userOnlyMandatoryDetails;
+	public static String userForMultiDelete1;
+	public static String userForMultiDelete2;
 	
 	public static HashMap<String, HashMap<String, String>> loginExcelData;
 	public static HashMap<String, HashMap<String, String>> userExcelData;
@@ -111,39 +115,6 @@ public class AddNewUser {
 			Assert.fail();
 		}
 	}
-
-	@Given("Mandatory {string}  are blank")
-	public void mandatory_are_blank(String string) 
-	{
-		try
-		{
-			user = userExcelData.get("User_AllFields");
-			user.put("Phone", String.valueOf(DynamicValues.PhoneNumber()));
-			if(! user.get("First Name").isBlank())
-				user.replace("First Name", user.get("First Name") + DynamicValues.SerialNumber());
-			
-			userPage.EnterUserDetails(user);
-		}
-		catch(Exception ex)
-		{
-			Log.error(ex.getMessage());
-			Assert.fail();
-		}
-	}
-
-	@Then("Error message should appear for missing {string}")
-	public void error_message_should_appear_for_missing(String string) 
-	{
-		try
-		{
-			userPage.VerifyUserAdded(user);
-		}
-		catch(Exception ex)
-		{
-			Log.error(ex.getMessage());
-			Assert.fail();
-		}
-	}
 	
 	@When("Fill in all the fields for {string}")
 	public void fill_in_all_the_fields_for(String key) 
@@ -157,6 +128,15 @@ public class AddNewUser {
 				user.put("Phone", String.valueOf(DynamicValues.PhoneNumber()));
 			if(! user.get("First Name").isBlank())
 				user.replace("First Name", user.get("First Name") + DynamicValues.SerialNumber());
+			
+			if(key.equals("User_MandatoryFields"))
+				userOnlyMandatoryDetails = user.get("First Name");
+			if(key.equals("User_AllFields"))
+				userAllDetails = user.get("First Name");
+			if(key.equals("User_ForMultiDelete1"))
+				userForMultiDelete1 = user.get("First Name");
+			if(key.equals("User_ForMultiDelete2"))
+				userForMultiDelete2 = user.get("First Name");
 			
 			userPage.EnterUserDetails(user);
 			userPage.ClickOnSubmitButton();

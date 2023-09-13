@@ -10,7 +10,23 @@ Feature: Edit user
   	When Admin clicks the edit icon
   	Then A pop up with User details appears for Edit
   
-  #Scenario: Check if the fields are updated
-  #Scenario: Check if the update throws error with invalid values
-  #Scenario: Check if you get error message when mandatory fields are erased
-  #Scenario: Check if description field is optional in update
+  Scenario Outline: Check if user able to update fields in different combinations
+  	Given Admin is on User Details pop up for Edit
+  	When Update the fields with values as per "<key>" and click submit
+  	Then Valid values should get updated or error should appear "<key>"
+  	
+  	 Examples: 
+      | key                    |
+      | User_EditMandatoryFields   |
+      | User_EditAllFields         |
+      | User_EditMissingFirstName  |
+      | User_EditMissingLastName   |
+      | User_EditMissingLocation   |
+      | User_EditMissingPhone      |
+      | User_EditMissingUserRole   |
+      | User_EditMissingRoleStatus |
+      | User_EditMissingVisaStatus |
+      | User_EditInvalidFirstName  |
+      | User_EditInvalidLastName   |
+      | User_EditInvalidEmail      |
+  	
