@@ -30,6 +30,30 @@ public class HomePage {
 		Log.info("User navigates to LMS Home Page");
 	}
 	
+	public void BrowseInvalidHomeURL()
+	{
+		driver.get(FileReaderManager.getInstance().getConfigReader().getInvalidApplicationUrl());
+		Log.info("User navigates to invalid LMS Home Page");
+	}
+	
+	public void BrowseBrokenHomeURL()
+	{
+		driver.get(FileReaderManager.getInstance().getConfigReader().getBrokenApplicationUrl());
+		Log.info("User navigates to broken LMS Home Page");
+	}
+	
+	public void ValidatePageNotFound()
+	{
+		Assert.assertTrue(actionHelper.ValidatePageNotFoundError());
+		Log.info("Verified user got 404 page not found when browsed invalid url");
+	}
+	
+	public void ValidateErrorCode()
+	{
+		Assert.assertTrue(actionHelper.ValidateErrorCode());
+		Log.info("Verified user got error code (>=400) when browsed broken url");
+	}
+	
 	public void VerifyHomePage()
 	{
 		actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getHomePageTitle());

@@ -44,20 +44,3 @@ Feature: User page validation
   Scenario: Validate pop up for adding user
   	When Admin clicks add new user button
   	Then A new pop up with User details appears
-
-#Check if the fields exist in pop
-#Check if Middle name, linkedIn url, email, user comments.under graduate,post graduate,time zone are optional 
-#Check if the program details are added in data table
-#Check for error messages for invalid fields
-#Check for error messages for mandatory fields
-#Validate row level edit icon
-#Check if the fields are updated
-#Check if the update throws error with invalid values
-#Check if you get error message when mandatory fields are erased
-#Check if description field is optional in update
-#Validate row level delete icon
-#Validate accept alert
-#Validate reject alert
-#Validate the delete icon below the header 
-#Check for single row delete
-#Check for multi row delete

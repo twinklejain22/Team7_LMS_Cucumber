@@ -54,6 +54,83 @@ public class Home {
 			Assert.fail();
 		}
 	}
+	
+	@When("Admin gives the invalid LMS portal URL")
+	public void admin_gives_the_invalid_lms_portal_url() 
+	{
+		try
+		{
+			homePage.BrowseInvalidHomeURL();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should recieve page not found error")
+	public void admin_should_recieve_page_not_found_error() 
+	{
+		try
+		{
+			homePage.ValidatePageNotFound();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@Given("Admin gives the LMS portal URL")
+	public void admin_gives_the_lms_portal_url() 
+	{
+		try
+		{
+			homePage.BrowseBrokenHomeURL();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("HTTP response error code for broken url")
+	public void http_response_error_code_for_broken_url() 
+	{
+		try
+		{
+			homePage.ValidateErrorCode();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@Then("Admin should see correct spellings in all fields")
+	public void admin_should_see_correct_spellings_in_all_fields() 
+	{
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see correct logo of the LMS")
+	public void admin_should_see_correct_logo_of_the_lms() 
+	{
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see logo is properly aligned")
+	public void admin_should_see_logo_is_properly_aligned() 
+	{
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
 	@Then("Admin should see login button")
 	public void admin_should_see_login_button() 
