@@ -1,12 +1,15 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class ActionHelper { 
 	
@@ -27,9 +30,31 @@ public class ActionHelper {
 	public Boolean IsAlignedInCenterHorizontally(WebElement element) 
 	{
 		int windowsCenter = driver.manage().window().getSize().getWidth()/2;
-		int usernameFieldCenter = element.getSize().getWidth()/2;
+		int fieldCenter = element.getSize().getWidth()/2;
 		
-		if(windowsCenter ==  usernameFieldCenter)
+		if(windowsCenter ==  fieldCenter)
+			return true;
+		else
+			return false;
+	}
+	
+	public Boolean IsAlignedInLeftHorizontally(WebElement element) 
+	{
+		int windowsCenter = driver.manage().window().getSize().getWidth()/2;
+		int fieldRightEnd = element.getLocation().y;
+		
+		if(windowsCenter >  fieldRightEnd)
+			return true;
+		else
+			return false;
+	}
+	
+	public Boolean IsAlignedInRightHorizontally(WebElement element) 
+	{
+		int windowsCenter = driver.manage().window().getSize().getWidth()/2;
+		int fieldRightEnd = element.getLocation().x;
+		
+		if(windowsCenter <  fieldRightEnd)
 			return true;
 		else
 			return false;
@@ -182,5 +207,103 @@ public class ActionHelper {
 			return true;
 		else
 			return false;
+	}
+	
+	public WebDriver SwitchToAddEditPopUp(WebDriver driver)
+	{
+		String popUpHandler = null;
+
+		Set<String> handles = driver.getWindowHandles(); 
+		Iterator<String> iterator = handles.iterator();
+		while (iterator.hasNext()){
+			popUpHandler = iterator.next();
+		}
+		
+		// switch to pop up window
+		driver.switchTo().window(popUpHandler);
+		
+		return driver;
+	}
+	
+	public Boolean ValidatePageNotFoundError()
+	{
+		if(driver.getTitle().contains("404"))
+			return true;
+		else
+			return false;
+	}
+	
+	public Boolean ValidateErrorCode()
+	{
+		if(driver.getTitle().contains("40"))
+			return true;
+		else
+			return false;
+	}
+	
+	public void SelectDropdownValue(WebElement element, String value)
+	{
+		Select dropdown = new Select(element);
+		dropdown.selectByVisibleText(value);
+	}
+	
+	public Boolean VerifySearchText(WebElement table, String text)
+	{
+		Boolean exists = false;
+		List<WebElement> cells = table.findElements(By.tagName("//td"));
+		for(WebElement cell : cells)
+		{
+			if(cell.getText().equalsIgnoreCase(text))
+			{
+				exists=true;
+				break;
+			}
+		}
+		
+		return exists;
+	}
+	
+	public Boolean VerifyRowPresent(WebElement table, List<String> lstValues)
+	{
+		Boolean exists = false;
+		List<WebElement> cells = table.findElements(By.tagName("//td"));
+		for(WebElement cell : cells)
+		{
+			if(lstValues.contains(cell.getText()))
+			{
+				exists = true;
+			}
+			else
+			{
+				exists = false;
+				break;
+			}
+		}
+		return exists;
+	}
+	
+	public void ClickEditInRow(WebElement table, String value)
+	{
+		WebElement reqRow = null;
+		List<WebElement> rows = table.findElements(By.tagName("//tr"));
+		for(WebElement row : rows)
+		{
+			List<WebElement> cells = row.findElements(By.tagName("//td"));
+			for(WebElement cell : cells)
+			{
+				if(cell.getText().equalsIgnoreCase(value))
+				{
+					reqRow = row;
+					break;
+				}
+			}
+			if(reqRow != null)
+			{
+				break;
+			}
+		}
+		
+		WebElement editButton = reqRow.findElement(By.xpath("//button[text()='User'])"));
+		Click(editButton);
 	}
 }
