@@ -6,6 +6,7 @@ import java.net.HttpURLConnection;
 import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,10 +37,23 @@ public class StudentPage {
 	@FindBy(xpath = "//select[@name='batch']")
 	WebElement batchIdDropdown;
 
+	@FindBy(xpath = "//label[@name='student']")
+	WebElement labelInStudentDropdown;
 	@FindBy(xpath = "//input[@type='text' and @name='student']")
 	WebElement studentDropdownSearchBox;
+	
+	@FindBy(xpath = "//label[@name='batchid']")
+	WebElement labelInBatchIdDropdown;
 	@FindBy(xpath = "//input[@type='text' and @name='batchid']")
 	WebElement batchIdDropdownSearchBox;
+	@FindBy(xpath="//a[text='Program']") WebElement programLink;
+	@FindBy(xpath="//a[text='Batch']") WebElement batchLink;
+	@FindBy(xpath="//a[text='class']") WebElement classLink;
+	@FindBy(xpath="//a[text='user']") WebElement userLink;
+	@FindBy(xpath="//a[text='admin']") WebElement adminLink;
+	@FindBy(xpath="//a[text='attendance']") WebElement attendanceLink;
+	@FindBy(xpath="//a[text='logout']") WebElement logoutLink;
+
 
 	public StudentPage(WebDriver driver) {
 		this.driver = driver;
@@ -176,5 +190,181 @@ public class StudentPage {
 		  String color = studentNameDropdown.getCssValue("color");
 		  Assert.assertEquals(color, Expectedcolor);
 	  }
-
-}
+    public void checkColorBatchId(String Expectedcolor)
+    {
+    	String color=batchIdDropdown.getCssValue("color");
+    	Assert.assertEquals(color,Expectedcolor);
+    }
+    public void checkLabelInStudentDropDown(String text)
+    {    	
+    	Assert.assertEquals(labelInStudentDropdown.getText(), text);
+    			
+    }
+    public void checkLabelInBatchIdDropDown(String text)
+    {
+    	Assert.assertEquals(labelInBatchIdDropdown.getText(), text);
+		
+    }
+    public void validateStudentScrolldown()
+    {
+    	
+    }
+    public void validateBatchIdScrolldown()
+    {
+    	
+    }
+    
+    public void selectStudentInDropdown()
+    {
+    	Select studentDropDown = new Select(studentNameDropdown);
+    	
+    	studentDropDown.selectByIndex(0);
+    }
+    
+    public void verifyStudentDropdownLabelAfterSelection()
+    {
+    	Assert.assertNotEquals(labelInStudentDropdown.getText(), "Select Student Name");
+    }
+    
+    public void selectBatchIdInDropdown()
+    {
+    	Select batchIdDropDown = new Select(batchIdDropdown);
+    	
+    	batchIdDropDown.selectByIndex(0);
+    }
+    
+    public void inputStudentSearchText(String searchText) {
+    	studentDropdownSearchBox.sendKeys(searchText);
+    }
+    
+    public void verifyStudentDropdownOptions(String searchText) {
+    	Select studentDropdown = new Select(studentNameDropdown);
+    	
+    	List<WebElement> options = studentDropdown.getOptions();
+    	
+    	Boolean result = true;
+    	
+    	for (int i = 0; i < options.size() && result; i++)
+    	{
+    		if ( ! options.get(i).getText().startsWith(searchText))
+    			result = false;
+    	}
+    	
+    	if (result == true) {
+    		Assert.assertTrue(true);
+    	}
+    	else {
+    		Assert.assertTrue(false);
+    	}
+    }
+    
+    public void inputBatchSearchText(Integer batchId){
+    	batchIdDropdownSearchBox.sendKeys(batchId.toString());
+    }
+    
+    public void verifyBatchDropdownOptions(Integer batchId) {
+        Select batchDropdown = new Select(batchIdDropdown);
+    	
+    	List<WebElement> options = batchDropdown.getOptions();
+    	
+    	Boolean result = true;
+    	
+    	for (int i = 0; i < options.size() && result; i++)
+    	{
+    		if ( ! options.get(i).getText().startsWith(batchId.toString()))
+    			result = false;
+    	}
+    	
+    	if (result == true) {
+    		Assert.assertTrue(true);
+    	}
+    	else {
+    		Assert.assertTrue(false);
+    	}
+    }
+    
+    public void verifyBatchDropdownLabelAfterSelection()
+    {
+    	Assert.assertNotEquals(labelInBatchIdDropdown.getText(), "Select batch Id");
+    }
+    
+    //features
+    public void verifyStudentDetailsPage() {
+		actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getStudentPageTitle());
+		Log.info("Verified that user is on LMS Home Page");
+	}
+    public void clickProgramLink()
+    {
+    	programLink.click();
+    }
+    public void isProgramPage()
+    {
+    	actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getProgramPageURL());
+    	
+    }
+    //test_002
+    public void verifyBatchPage() {
+  		actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getBatchPageURL());
+  		Log.info("Verified that user is on LMS Home Page");
+  	}
+      public void clickBatchLink()
+      {
+      	batchLink.click();
+      }
+      //test_003
+      public void isClassPage()
+      {
+      	actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getClassPageURL());
+      	
+      }
+      public void clickClassLink()
+      {
+      	classLink.click();
+      }
+      //test_004
+      public void clickUserLink()
+      {
+      	userLink.click();
+      }
+      
+      public void isUserPage()
+      {
+      	actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getClassPageURL());
+      	
+      }
+      //test_005
+      public void clickAdminLink()
+      {
+      	adminLink.click();
+      }
+      
+      public void isAdminPage()
+      {
+      	actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getAdminURL());
+      	
+      }
+      //test_006
+      public void clickAttendanceLink()
+      {
+      	attendanceLink.click();
+      }
+      
+      public void isAttendancePage()
+      {
+      	actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getAttendanceURL());
+      	
+      }
+      //test_006
+      public void clickLogoutLink()
+      {
+      	logoutLink.click();
+      }
+      
+      public void isLogoutPage()
+      {
+      	actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getLogoutURL());
+      	
+      }
+ 
+      
+    }

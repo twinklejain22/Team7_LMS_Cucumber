@@ -73,7 +73,58 @@ Feature: For Student page
     Given Admin is on dashboard page after Login
     When Admin clicks "Student" on the navigation bar
     Then Admin should see select student name in "gray" color
+  
+    @013_validateGreyColorBatchIdDropDown
+    Scenario:Validate gray color in BatchId drop down
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Student" on the navigation bar
+    Then Admin should see select batch ID in "gray" color
+  
+    @13_validateFirstDropDownLabelisSelectStudentName
+    Scenario: Validate first drop down label is select student name
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Student" on the navigation bar
+    Then Admin should see "select student name" in first
     
+    @14_ValidateSecondDropdownBatchId
+    Scenario: Validate second drop down label is select batch id
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Student" on the navigation bar
+    Then Admin should see "select batch id" in second
     
+    @15_ValidateStudentScrollDown
+    Scenario: Validate scroll down inside student name dropdown
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Student" on the navigation bar
+    Then Admin should able to scroll down to select the name
     
+    @16_ValidateBatchIdScrollDown
+    Scenario: Validate scroll down inside batch id dropdown
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Student" on the navigation bar
+    Then Admin should able to scroll down to select the batch id
+    
+    @17_StudentNameIsfading
+    Scenario: Validate select student name is fading
+    Given Admin is on student details page
+    When Admin select student name from the drop down 
+    Then Admin should not see select student name text 
+    
+    @18_BatchIdIsfading
+    Scenario: Validate select batch id  is fading
+    Given Admin is on student details page
+    When Admin select batch id from the drop down 
+    Then Admin should not see select batch id text     
+    
+    @19_SelectStudentUsingSearchBox
+    Scenario: Validate select student name using search box
+    Given Admin is on student details page
+    When Admin clicks select student name and  enters "x" alphabet in the search box 
+    Then Admin should see student name start with "x" is listed below
+    
+    @20_SelectBatchUsingSearchBox
+    Scenario: Validate select batch id using search box
+    Given Admin is on student details page
+    When Admin  clicks select batch id and enter 6 number in the search box 
+    Then Admin should see batch id start with 6 is listed below
     
