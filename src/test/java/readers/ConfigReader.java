@@ -273,4 +273,75 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("submitBtnText not specified in the Configuration.properties file.");
 	}
+	
+	
+	public String getProgramPageURL() {
+		String path = properties.getProperty("programPageUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("ProgramUrl not specified in the Configuration.properties file.");
+	}
+
+	public String getBatchPageURL() {
+		String path = properties.getProperty("batchPageUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("BatchURl not specified in the Configuration.properties file.");
+	}
+
+	public String getClassPageURL() {
+		String path = properties.getProperty("classPageUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("classURl not specified in the Configuration.properties file.");
+	}
+
+	public String getUserPageURL() {
+		String path = properties.getProperty("userPageUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("UserURl not specified in the Configuration.properties file.");
+	}
+	public String getAdminURL() {
+		String path = properties.getProperty("adminPageUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("adminURl not specified in the Configuration.properties file.");
+	}
+	public String getAttendanceURL() {
+		String path = properties.getProperty("attendancePageURl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("attendance not specified in the Configuration.properties file.");
+	}
+	public String getLogoutURL() {
+		String path = properties.getProperty("logoutPageUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("logout url not specified in the Configuration.properties file.");
+	}
+	
+	public String getStudentPageTitle() {
+		String title = properties.getProperty("studentPageTitle");
+		if (title != null)
+			return title;
+		else
+			throw new RuntimeException("getstudentpage title is not speicified in the configuration file");
+
+	}
+
+	public String getAssignmentTableHeaders() {
+		String title = properties.getProperty("assignmentTableHeaders");
+		if (title != null)
+			return title;
+		else
+			throw new RuntimeException("assignmentTableHeaders title is not speicified in the configuration file");
+	}
 }
