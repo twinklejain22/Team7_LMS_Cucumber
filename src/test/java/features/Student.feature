@@ -128,3 +128,22 @@ Feature: For Student page
     When Admin  clicks select batch id and enter 6 number in the search box 
     Then Admin should see batch id start with 6 is listed below
     
+    @21_Selectingonlystudentnamewillnotdisplaydetails
+    Scenario: Validate selecting only  student name  will not display any details
+    Given Admin is on student details page
+    When Admin selects only student name
+    Then Student details should not be displayed
+    
+    @22_SelectiingOnlyBatchidwillnotdisplaydetails
+    Scenario: Validate selecting only  batch id  will not display any details
+    Given Admin is on student details page
+    When Admin selects only  batch id
+    Then Student details should not be displayed
+    
+    @23_ValidatingStudentnameandBatchId    
+    Scenario: Validate selecting student name and batch id
+    Given Admin is on student details page
+    When  Admin selects  student name and batch id
+    Then Particular student informations should be displayed
+
+    

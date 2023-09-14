@@ -10,11 +10,11 @@ public class StudentNavigation {
 	TestContext testContext;
 	StudentPage studentPage;
 
-	@Given("Admin is on student details page")
-	public void admin_is_on_student_details_page() {
-		studentPage.verifyStudentDetailsPage();
-
-	}
+//	@Given("Admin is on student details page")
+//	public void admin_is_on_student_details_page() {
+//		studentPage.verifyStudentDetailsPage();
+//
+//	}
 
 	@When("Admin clicks on program link on student  page")
 	public void admin_clicks_on_program_link_on_student_page() {
