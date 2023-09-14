@@ -248,6 +248,9 @@ public class UserPageValidation {
 	@Then("A new pop up with User details appears")
 	public void a_new_pop_up_with_user_details_appears() 
 	{
+<<<<<<< HEAD
+	    
+=======
 		try
 		{
 			userPage.VerifyUserDetailsPopUpOpen();
@@ -257,5 +260,6 @@ public class UserPageValidation {
 			Log.error(ex.getMessage());
 			Assert.fail();
 		}
+>>>>>>> 98bb455cde927b3f4953ec94f08a9490074418af
 	}
 }

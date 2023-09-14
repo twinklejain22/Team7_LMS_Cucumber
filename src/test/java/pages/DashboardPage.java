@@ -17,24 +17,35 @@ import utils.ActionHelper;
 import utils.Log;
 
 public class DashboardPage {
-	
+
 	WebDriver driver;
 	ActionHelper actionHelper;
-	
-	@FindBy(xpath = "//a[text()='User']") WebElement linkUser;
-	@FindBy(xpath = "//a[text()='Program']") WebElement linkProgram;
-	@FindBy(xpath = "//a[text()='Batch']") WebElement linkBatch;
-	@FindBy(xpath = "//a[text()='Class']") WebElement linkClass;
-	@FindBy(xpath = "//a[text()='Attendance']") WebElement linkAttendance;
-	@FindBy(xpath = "//a[text()='Assignment']") WebElement linkAssignment;
-	@FindBy(xpath = "//a[text()='Student']") WebElement linkStudent;
-	@FindBy(xpath = "//h1[contains(text(),'User')]") WebElement txtUserHeader;
-	@FindBy(xpath = "//div[contains(@class, 'pagination')]") WebElement pagination;
-	@FindBy(xpath = "//nav") WebElement navigationBar;
-	@FindBy(xpath = "//a[text()='Logout']") WebElement linkLogout;
-	
-	public DashboardPage(WebDriver driver)
-	{
+
+	@FindBy(xpath = "//a[text()='User']")
+	WebElement linkUser;
+	@FindBy(xpath = "//a[text()='Program']")
+	WebElement linkProgram;
+	@FindBy(xpath = "//h1[contains(text(),'User')]")
+	WebElement txtUserHeader;
+	@FindBy(xpath = "//div[contains(@class, 'pagination')]")
+	WebElement pagination;
+	@FindBy(xpath = "//a[text()='Batch']")
+	WebElement linkBatch;
+	@FindBy(xpath = "//a[text()='Class']")
+	WebElement linkClass;
+	@FindBy(xpath = "//a[text()='Attendance']")
+	WebElement linkAttendance;
+	@FindBy(xpath = "//a[text()='Assignment']")
+	WebElement linkAssignment;
+	@FindBy(xpath = "//a[text()='Student']")
+	WebElement linkStudent;
+
+	@FindBy(xpath = "//nav")
+	WebElement navigationBar;
+	@FindBy(xpath = "//a[text()='Logout']")
+	WebElement linkLogout;
+
+	public DashboardPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		actionHelper = new ActionHelper(driver);
@@ -56,12 +67,11 @@ public class DashboardPage {
 			}
 		}
 	}
-	
-	public void GoToPage(String page)
-	{
-		if(page.equals("Program"))
+
+	public void GoToPage(String page) {
+		if (page.equals("Program"))
 			linkProgram.click();
-		else if(page.equals("User"))
+		else if (page.equals("User"))
 			linkUser.click();
 		else if (page.equals("Batch"))
 			linkBatch.click();
@@ -76,15 +86,13 @@ public class DashboardPage {
 			
 		Log.info("User clicks on " + page + " on LMS Dashboard Page");
 	}
-	
-	public void ValidatePageURL(String urlText)
-	{
+
+	public void ValidatePageURL(String urlText) {
 		Assert.assertTrue(actionHelper.VerifyURL(urlText));
 		Log.info("Verified Page URL contains " + urlText);
 	}
-	
-	public void VerifyPageHeader(String expectedHeader)
-	{
+
+	public void VerifyPageHeader(String expectedHeader) {
 		Assert.assertTrue(actionHelper.IsHeaderValid(txtUserHeader, expectedHeader));
 		Log.info("Verified header text for LMS " + expectedHeader + " Page");
 	}

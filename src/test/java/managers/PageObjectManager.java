@@ -16,6 +16,7 @@ public class PageObjectManager {
 	private ResetPasswordPage resetPage;
 	private StudentPage studentPage;
 	private AttendancePage attendancePage;
+	private ClassPage classPage;
 	
 	public PageObjectManager(WebDriver driver) 
 	{
@@ -65,6 +66,11 @@ public class PageObjectManager {
 	public AttendancePage getAttendancePage()
 	{
 		return(attendancePage==null)? attendancePage=new AttendancePage(driver): attendancePage;
+	}
+
+	public ClassPage getClassPage()
+	{
+		return (classPage == null) ? classPage = new ClassPage(driver) : classPage;
 	}
 
 }

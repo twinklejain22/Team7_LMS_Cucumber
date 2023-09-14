@@ -173,5 +173,15 @@ public class LoginPage {
 		// TODO Auto-generated method stub
 		
 	}
-	
+	public void VerifyPage()
+	{
+		Assert.assertTrue(actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getLoginPageTitle()));
+		Log.info("Verified that user is on LMS Login Page");
+	}
+
+	public void EnterUsernamePassword(String username, String password) {
+		
+		
+	}
+
 }

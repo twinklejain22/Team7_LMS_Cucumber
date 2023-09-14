@@ -344,4 +344,118 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("assignmentTableHeaders title is not speicified in the configuration file");
 	}
+}	public String getBatchIDLabel()
+	{
+		String path = properties.getProperty("batchIDLabel");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("userTableExpectedHeaders not specified in the Configuration.properties file.");
+	}
+	
+	public String getClassPageTitle() {
+		String path = properties.getProperty("classPageTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("ClassPageTitle not specified in the Configuration.properties file.");
+	
+	}
+	public String getClassPageHeader() {
+		String path = properties.getProperty("classPageHeader");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("classPageHeader not specified in the Configuration.properties file.");
+	}
+
+	public String getDeleteAlertText() {
+		String path = properties.getProperty("deleteAlertText");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("deleteAlertText not specified in the Configuration.properties file.");
+	}
+	
+	public String getAddEditUserTitle() 
+	{
+		String path = properties.getProperty("addEditUserTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("addEditUserTitle not specified in the Configuration.properties file.");
+	}
+
+	public Object getDashboardTitle() 
+	{
+		String path = properties.getProperty("dashboardPageTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("dashboardPageTitle not specified in the Configuration.properties file.");
+	}
+
+	public String getInvalidApplicationUrl() 
+	{
+		String path = properties.getProperty("invalidAppUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("invalidAppUrl not specified in the Configuration.properties file.");
+	}
+
+	public String getBrokenApplicationUrl() 
+	{
+		String path = properties.getProperty("brokenAppUrl");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("brokenAppUrl not specified in the Configuration.properties file.");
+	}
+
+	public Object getUserDetailsPopUpTitle() 
+	{
+		String path = properties.getProperty("addEditUserTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("addEditUserTitle not specified in the Configuration.properties file.");
+	}
+
+	public long getDashBoardLoadingTime() 
+	{
+		long path = Long.parseLong(properties.getProperty("dashboardLoadTime"));
+		if (path != 0)
+			return path;
+		else
+			throw new RuntimeException("dashboardLoadTime not specified in the Configuration.properties file.");
+	}
+	public long getClassLoadingTime() 
+	{
+		long path = Long.parseLong(properties.getProperty("classPageLoadTime"));
+		if (path != 0)
+			return path;
+		else
+			throw new RuntimeException("class loading time not specified in the Configuration.properties file.");
+	}
+
+	public String getNavigationLinks() 
+	{
+		String path = properties.getProperty("navLinks");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("navLinks not specified in the Configuration.properties file.");
+	}
+	
+	public String getClassDetailsPopUpTitle() 
+	{
+		String path = properties.getProperty("addEClassTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("addEditClassTitle not specified in the Configuration.properties file.");
+	}
 }
+
+
