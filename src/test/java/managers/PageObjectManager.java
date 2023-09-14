@@ -14,6 +14,8 @@ public class PageObjectManager {
 	private UserPage userPage;
 	private ForgotPage forgotPage;
 	private ResetPasswordPage resetPage;
+	private StudentPage studentPage;
+	private AttendancePage attendancePage;
 	
 	public PageObjectManager(WebDriver driver) 
 	{
@@ -53,6 +55,16 @@ public class PageObjectManager {
 	public ResetPasswordPage getResetPasswordPage()
 	{
 		return (resetPage == null) ? resetPage = new ResetPasswordPage(driver) : resetPage;
+	}
+	
+	public StudentPage getStudentPage()
+	{
+		return(studentPage==null)? studentPage=new StudentPage(driver): studentPage;
+	}
+	
+	public AttendancePage getAttendancePage()
+	{
+		return(attendancePage==null)? attendancePage=new AttendancePage(driver): attendancePage;
 	}
 
 }

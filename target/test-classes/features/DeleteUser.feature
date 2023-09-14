@@ -11,6 +11,7 @@ Feature: Delete user
   	Then Alert appears with yes and No option
 
   Scenario: Validate accept alert
+  	Given Alert appears with yes and No option
   	When Admin click yes option
   	Then User deleted alert pops and user is no more available in data table
   	

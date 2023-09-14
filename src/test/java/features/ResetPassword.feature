@@ -54,5 +54,5 @@ Feature: Reset password
       | PasswordReset_Invalid         |
       | PasswordReset_EmptyNewPass    |
       | PasswordReset_EmptyRetypePass |
-      | PasswordReset_EmptyFields |
+      | PasswordReset_EmptyFields     |
       | PasswordReset_Mismatch        |
