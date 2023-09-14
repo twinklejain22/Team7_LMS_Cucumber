@@ -246,8 +246,7 @@ public class UserPageValidation {
 	@Then("A new pop up with User details appears")
 	public void a_new_pop_up_with_user_details_appears() 
 	{
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 }

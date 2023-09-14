@@ -12,6 +12,7 @@ public class PageObjectManager {
 	private DashboardPage dashboardPage;
 	private PaginationPage paginationPage;
 	private UserPage userPage;
+	private ClassPage classPage;
 	
 	public PageObjectManager(WebDriver driver) 
 	{
@@ -41,6 +42,11 @@ public class PageObjectManager {
 	public UserPage getUserPage()
 	{
 		return (userPage == null) ? userPage = new UserPage(driver) : userPage;
+	}
+
+	public ClassPage getClassPage()
+	{
+		return (classPage == null) ? classPage = new ClassPage(driver) : classPage;
 	}
 
 }

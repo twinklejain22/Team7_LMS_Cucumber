@@ -2,9 +2,8 @@
 Feature: Manage Class Page Verification
 
   Background: Logged on the LMS portal as Admin
-    			Admin is on dashboard page after Login
-    			Admin clicks "Class" button on the navigation bar
-
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Class" button on the navigation bar
 
   @ClassPageNavigation
   Scenario: Verify landing in class page
@@ -20,7 +19,7 @@ Feature: Manage Class Page Verification
 
   @ClassPageTextHeader
   Scenario: Validate text in manage class page
-    Then Admin should see correct spelling for the all the
+    Then Admin should see correct spelling for the all the fields
 
   @ClassPageDeleteIconBelowHeader
   Scenario: Verify delete icon below the header
@@ -61,3 +60,7 @@ Feature: Manage Class Page Verification
   @ClassPageCheckBox
   Scenario: Verify check box in the data table
     Then Admin should see check box in the all rows  of data table
+
+  @ClassPagePopUpAlertValidation
+  Scenario: Verify pop up when Add Button clicked
+    Then Admin should see pop up alert
