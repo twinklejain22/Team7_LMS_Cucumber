@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class ActionHelper { 
@@ -25,6 +26,12 @@ public class ActionHelper {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
 		
+	}
+	
+	public void DoubleClick(WebElement element)
+	{
+		Actions actions = new Actions(driver);
+		actions.doubleClick(element).perform();
 	}
 
 	public Boolean IsAlignedInCenterHorizontally(WebElement element) 
@@ -128,6 +135,18 @@ public class ActionHelper {
 				if (!order.equalsIgnoreCase(sortOrder)) {
 					col.click();
 				}
+			}
+		}
+	}
+	
+	public void DoubleClickOnColumnHeader(WebElement table, String colName)
+	{
+		List<WebElement> headers = table.findElements(By.tagName("th"));
+		for (WebElement col : headers )
+		{
+			if (!colName.equalsIgnoreCase(col.getText()))
+			{
+				DoubleClick(col);
 			}
 		}
 	}

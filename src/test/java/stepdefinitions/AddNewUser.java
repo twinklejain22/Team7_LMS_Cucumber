@@ -97,24 +97,6 @@ public class AddNewUser {
 			Assert.fail();
 		}
 	}
-
-	@When("Fill in all the fields except optional fields with valid values")
-	public void fill_in_all_the_fields_except_optional_fields_with_valid_values() 
-	{
-		try
-		{
-			user = userExcelData.get("User_MandatoryFields");
-			user.put("Phone", String.valueOf(DynamicValues.PhoneNumber()));
-			user.replace("First Name", user.get("First Name") + DynamicValues.SerialNumber());
-			
-			userPage.EnterUserDetails(user);
-		}
-		catch(Exception ex)
-		{
-			Log.error(ex.getMessage());
-			Assert.fail();
-		}
-	}
 	
 	@When("Fill in all the fields for {string}")
 	public void fill_in_all_the_fields_for(String key) 
@@ -122,10 +104,12 @@ public class AddNewUser {
 		try
 		{
 			user = userExcelData.get(key);
+			
 			if(key.equals("User_MissingPhone"))
 				user.put("Phone", "");
 			else
 				user.put("Phone", String.valueOf(DynamicValues.PhoneNumber()));
+			
 			if(! user.get("First Name").isBlank())
 				user.replace("First Name", user.get("First Name") + DynamicValues.SerialNumber());
 			

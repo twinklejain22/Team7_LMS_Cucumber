@@ -219,4 +219,58 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("navLinks not specified in the Configuration.properties file.");
 	}
+
+	public String getForgotPageTitle() 
+	{
+		String path = properties.getProperty("forgotPageTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("forgotPageTitle not specified in the Configuration.properties file.");
+	}
+
+	public Object getEmailDefaultText() 
+	{
+		String path = properties.getProperty("emailDefaultText");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("emailDefaultText not specified in the Configuration.properties file.");
+	}
+
+	public String getResetPageTitle() 
+	{
+		String path = properties.getProperty("resetPageTitle");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("resetPageTitle not specified in the Configuration.properties file.");
+	}
+
+	public Object getNewPwdlabelText() 
+	{
+		String path = properties.getProperty("newPwdLabel");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("newPwdLabel not specified in the Configuration.properties file.");
+	}
+
+	public Object getRetypePwdlabelText() 
+	{
+		String path = properties.getProperty("retypePwdLabel");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("retypePwdLabel not specified in the Configuration.properties file.");
+	}
+
+	public Object getSubmitBtnText() 
+	{
+		String path = properties.getProperty("submitBtnText");
+		if (path != null)
+			return path;
+		else
+			throw new RuntimeException("submitBtnText not specified in the Configuration.properties file.");
+	}
 }

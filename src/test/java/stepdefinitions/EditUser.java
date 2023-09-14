@@ -144,10 +144,12 @@ public class EditUser {
 		try
 		{
 			user = userExcelData.get(key);
+			
 			if(key.equals("User_MissingPhone"))
 				user.put("Phone", "");
 			else
 				user.put("Phone", String.valueOf(DynamicValues.PhoneNumber()));
+			
 			if(! user.get("First Name").isBlank())
 				user.replace("First Name", user.get("First Name") + DynamicValues.SerialNumber());
 			

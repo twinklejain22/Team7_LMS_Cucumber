@@ -215,10 +215,7 @@ public class UserPage {
 	{
 		driver.switchTo().window(addeditPopUpHandle);
 		
-		if(!userDetails.get("First Name").isBlank())
-		{
-			actionHelper.EnterText(txtFirstName, userDetails.get("First Name"));
-		}
+		actionHelper.EnterText(txtFirstName, userDetails.get("First Name"));
 		actionHelper.EnterText(txtMiddleName, userDetails.get("Middle Name"));
 		actionHelper.EnterText(txtLastName, userDetails.get("Last Name"));
 		actionHelper.EnterText(txtLocation, userDetails.get("Location"));
