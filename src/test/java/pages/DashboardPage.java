@@ -23,6 +23,11 @@ public class DashboardPage {
 	
 	@FindBy(xpath = "//a[text()='User']") WebElement linkUser;
 	@FindBy(xpath = "//a[text()='Program']") WebElement linkProgram;
+	@FindBy(xpath = "//a[text()='Batch']") WebElement linkBatch;
+	@FindBy(xpath = "//a[text()='Class']") WebElement linkClass;
+	@FindBy(xpath = "//a[text()='Attendance']") WebElement linkAttendance;
+	@FindBy(xpath = "//a[text()='Assignment']") WebElement linkAssignment;
+	@FindBy(xpath = "//a[text()='Student']") WebElement linkStudent;
 	@FindBy(xpath = "//h1[contains(text(),'User')]") WebElement txtUserHeader;
 	@FindBy(xpath = "//div[contains(@class, 'pagination')]") WebElement pagination;
 	@FindBy(xpath = "//nav") WebElement navigationBar;
@@ -58,6 +63,16 @@ public class DashboardPage {
 			linkProgram.click();
 		else if(page.equals("User"))
 			linkUser.click();
+		else if (page.equals("Batch"))
+			linkBatch.click();
+		else if (page.equals("Class"))
+			linkClass.click();
+		else if (page.equals("Attendance"))
+			linkAttendance.click();
+		else if (page.equals("Assignment"))
+			linkAssignment.click();
+		else if (page.equals("Student"))
+			linkStudent.click();
 			
 		Log.info("User clicks on " + page + " on LMS Dashboard Page");
 	}
