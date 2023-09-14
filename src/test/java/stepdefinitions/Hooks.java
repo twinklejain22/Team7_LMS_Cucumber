@@ -28,7 +28,7 @@ public class Hooks {
 		if(scenario.isFailed())
 		{
 			Screenshots.CaptureScreenshot(driver);
-			Allure.attachment("Myscreenshot",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+			Allure.attachment("Myscreenshot", new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
 		}
 	}
 

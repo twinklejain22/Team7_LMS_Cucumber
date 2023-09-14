@@ -50,21 +50,22 @@ public class DashboardPage {
 		PageFactory.initElements(driver, this);
 		actionHelper = new ActionHelper(driver);
 	}
-
-	public void VerifyDashboardPage() {
-		try {
-			Assert.assertTrue(
-					actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getDashboardPageTitle()));
+	
+	public void VerifyDashboardPage()
+	{
+		try
+		{
+			Assert.assertTrue(actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getDashboardPageTitle()));
 			Log.info("Verified that user is on LMS Dashboard Page");
-		} catch (NoSuchElementException ex) {
-			if (driver.getTitle().contains("40")) {
+		}
+		catch(NoSuchElementException ex)
+		{
+			if(driver.getTitle().contains("40"))
+			{
 				Assert.assertTrue(true);
 				Log.info("Verified for broken link for Dashboard Page");
 			}
 		}
-		Assert.assertTrue(
-				actionHelper.IsPageOpen(FileReaderManager.getInstance().getConfigReader().getDashboardPageTitle()));
-		Log.info("Verified that user is on LMS Dashboard Page");
 	}
 
 	public void GoToPage(String page) {
@@ -82,7 +83,7 @@ public class DashboardPage {
 			linkAssignment.click();
 		else if (page.equals("Student"))
 			linkStudent.click();
-
+			
 		Log.info("User clicks on " + page + " on LMS Dashboard Page");
 	}
 
@@ -95,56 +96,57 @@ public class DashboardPage {
 		Assert.assertTrue(actionHelper.IsHeaderValid(txtUserHeader, expectedHeader));
 		Log.info("Verified header text for LMS " + expectedHeader + " Page");
 	}
-
-	public void VerifyDashboardTitle() {
+	
+	public void VerifyDashboardTitle()
+	{
 		Assert.assertEquals(driver.getTitle(), FileReaderManager.getInstance().getConfigReader().getDashboardTitle());
 		Log.info("Verified Dashboard page title");
 	}
-
-	public void VerifyDashboardTitleAlignment() {
+	
+	public void VerifyDashboardTitleAlignment()
+	{
 		Assert.assertTrue(actionHelper.IsAlignedInLeftHorizontally(txtUserHeader));
 		Log.info("Verified Dashboard page title is aligned to left");
 	}
-
-	public void ValidateNavigationTimeToDashboard(LoginPage loginPage, String username, String password) {
+	
+	public void ValidateNavigationTimeToDashboard(LoginPage loginPage, String username, String password)
+	{
 		loginPage.EnterUsernamePassword(username, password);
-
+		
 		long start = System.currentTimeMillis();
-		loginPage.ClickOnLoginBtn();
+		loginPage.ClickLoginBtn();
 		long finish = System.currentTimeMillis();
-		long totalTime = finish - start;
-
+		long totalTime = finish - start; 
+		
 		Assert.assertTrue(totalTime <= FileReaderManager.getInstance().getConfigReader().getDashBoardLoadingTime());
-
+		
 		Log.info("Verified load time for Dashboard page");
 	}
-
-	public void VerifyNavigationBarAlignment() {
+	
+	public void VerifyNavigationBarAlignment()
+	{
 		Assert.assertTrue(actionHelper.IsAlignedInRightHorizontally(navigationBar));
 		Log.info("Verified Dashboard navigation bar is aligned to right");
 	}
-
-	public void VerifyNavigationBarLinks() {
-//		List<WebElement> navLinks = navigationBar.findElements(By.tagName("//a"));
-//		List<String> navLinksText = new ArrayList<>();
-		List <WebElement> navLinks = navigationBar.findElements(By.tagName("//a"));
-		List <String> navLinksText = new ArrayList<>();
+	
+	public void VerifyNavigationBarLinks()
+	{
+		List<WebElement> navLinks = navigationBar.findElements(By.tagName("//a"));
+		List<String> navLinksText = new ArrayList<>();
 		for (WebElement link : navLinks )
 		{
 			navLinksText.add(link.getText());
 		}
-		List expectedLinks = (List) Arrays.asList(FileReaderManager.getInstance().getConfigReader().getNavigationLinks().split(","));
-		
-//		List<String> expectedLinks = Arrays.asList(FileReaderManager.getInstance().getConfigReader().getNavigationLinks().split(","));
+		List<String> expectedLinks = Arrays.asList(FileReaderManager.getInstance().getConfigReader().getNavigationLinks().split(","));
 		
 		Assert.assertEquals(navLinksText, expectedLinks); 
 		Log.info("Verified spelling and order of navigation links in navigation bar");
-	
 	}
-
-	public void ClickOnLogout() {
+	
+	public void ClickOnLogout()
+	{
 		actionHelper.Click(linkLogout);
 		Log.info("User clicks on Logout");
 	}
-
+			
 }

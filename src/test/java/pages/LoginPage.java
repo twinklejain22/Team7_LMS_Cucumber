@@ -1,6 +1,8 @@
 package pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -114,19 +116,62 @@ public class LoginPage {
 		Log.info("Verified that Forgot Username/Password link is displayed");
 	}
 	
+	public void ClickForgotCredLink()
+	{
+		actionHelper.Click(linkForgot);
+		Log.info("User clicks Forgot Username/Password link");
+	}
+	
 	public void VerifyResetPasswordDisplayed()
 	{
 		Assert.assertTrue(linkReset.isDisplayed());
 		Log.info("Verified that Reset Password link is displayed");
 	}
 	
+	public void ClickResetPasswordLink()
+	{
+		actionHelper.Click(linkReset);
+		Log.info("User clicks Reset Password link");
+	}
+	
 	public void Login(String userName, String password)
+	{
+		EnterUsernamePassword(userName, password);
+		ClickLoginBtn();
+		
+		Log.info("User enters username, password and clicks on Login button");
+	}
+	
+	public void EnterUsernamePassword(String userName, String password)
 	{
 		actionHelper.EnterText(txtUserName, userName);
 		actionHelper.EnterText(txtPassword, password);
+	}
+	
+	public void ClickLoginBtn()
+	{
 		actionHelper.Click(btnLogin);
+	}
+	
+	public void LoginUsingKeyboard(String userName, String password)
+	{
+		EnterUsernamePassword(userName, password);
+		txtPassword.sendKeys(Keys.ENTER);
+		Log.info("User enters username, password and presses Enter key for login");
+	}
+	
+	public void VerifyErrorMessage(String errorTxt)
+	{
+		Alert alert = driver.switchTo().alert();
+		Assert.assertEquals(alert.getText(), errorTxt);
+		alert.accept();
+		Log.info("Verified error message for invalid login");
+	}
+
+	public void VerifyAllSpellings() 
+	{
+		// TODO Auto-generated method stub
 		
-		Log.info("User enters username, password and clicks on Login button");
 	}
 	public void VerifyPage()
 	{

@@ -178,26 +178,263 @@ Driver info: driver.version: RemoteWebDriver
 [ERROR] 2023-09-10 18:33:37.181 [main] AllureLifecycle - Could not add attachment: no test is running
 [ERROR] 2023-09-10 18:33:37.926 [main] AllureLifecycle - Could not add attachment: no test is running
 [ERROR] 2023-09-10 18:40:41.863 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-10 22:16:16.981 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-10 22:16:17.551 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 09:48:40.908 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 09:48:41.504 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 09:48:42.050 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:55:57.275 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:55:57.830 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:55:58.363 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:55:58.883 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:55:59.422 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:55:59.975 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:56:00.496 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:56:01.003 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:56:01.529 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-11 14:56:02.039 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-12 21:11:48.890 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-12 21:11:49.450 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-12 21:11:50.016 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-13 20:22:36.426 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-13 20:22:37.004 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-13 20:43:48.562 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-13 20:43:49.120 [main] AllureLifecycle - Could not add attachment: no test is running
-[ERROR] 2023-09-14 13:15:45.191 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-11 00:58:12.596 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-11 00:58:13.928 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-11 00:58:14.527 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-11 15:50:16.363 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 15:50:16.476 [main] Log - Verified that user is on LMS Home Page
+[INFO ] 2023-09-11 15:50:16.892 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 15:50:17.164 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 15:50:17.361 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 15:50:17.504 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-11 15:51:07.647 [main] Log - no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=116.0.5845.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fe6c4dfcf4c9c70e4c631108450e5311, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64271/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe6c4dfcf4c9c70e4c631108450e5311
+[ERROR] 2023-09-11 15:51:09.541 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-11 15:51:09.741 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-11 15:51:59.813 [main] Log - no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=116.0.5845.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fe6c4dfcf4c9c70e4c631108450e5311, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64271/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe6c4dfcf4c9c70e4c631108450e5311
+[ERROR] 2023-09-11 15:52:01.183 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-11 21:25:40.390 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 21:25:40.506 [main] Log - Verified that user is on LMS Home Page
+[ERROR] 2023-09-11 21:25:40.641 [main] Log - invalid argument
+  (Session info: chrome=116.0.5845.179)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [02c836e2da1ad487aa95a871d9590e21, get {url=}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57588}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57588/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 02c836e2da1ad487aa95a871d9590e21
+[ERROR] 2023-09-11 21:25:42.376 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-11 21:25:42.734 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 21:25:42.942 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 21:25:43.196 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 21:25:43.367 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 21:25:43.573 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-11 21:25:43.806 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[ERROR] 2023-09-11 21:42:30.392 [main] Log - Error communicating with the remote browser. It may have died.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac002d3a02108f0200d1f96572b47b69, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60912/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ac002d3a02108f0200d1f96572b47b69
+[INFO ] 2023-09-11 21:42:45.259 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-11 21:42:45.356 [main] Log - Verified that user is on LMS Home Page
+[ERROR] 2023-09-11 21:42:45.489 [main] Log - invalid argument
+  (Session info: chrome=116.0.5845.179)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [15cc944acf2b84f56983745e5bff056e, get {url=}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60957/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 15cc944acf2b84f56983745e5bff056e
+[ERROR] 2023-09-11 21:42:47.145 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-11 23:04:43.430 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-11 23:04:44.783 [main] Log - no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.179)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab93692ef12871541d019f2cbb434bfe, get {url=https://dsportalapp.herokuapp.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.179, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62887}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62887/devtoo..., se:cdpVersion: 116.0.5845.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab93692ef12871541d019f2cbb434bfe
+[INFO ] 2023-09-11 23:07:27.383 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-11 23:07:28.328 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-11 23:24:47.630 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-11 23:24:48.866 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[ERROR] 2023-09-12 01:21:24.318 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:25.388 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:26.220 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:27.041 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:27.886 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:28.722 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:29.491 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:30.306 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:31.087 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:31.835 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:32.609 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:33.378 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:34.112 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 01:21:34.860 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:38.196 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:39.054 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:39.907 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:40.763 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:41.644 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:42.528 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:43.308 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:44.099 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:44.847 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:45.633 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:46.421 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:47.202 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:47.980 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:48.845 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 02:24:49.852 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:34.552 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:35.125 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:35.836 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:36.416 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:36.982 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:37.535 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:38.028 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:38.516 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:39.058 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:39.582 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:40.048 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:40.490 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:40.918 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:41.361 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:31:41.805 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:55.271 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:55.820 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:56.363 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:56.917 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:57.545 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:58.144 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:58.671 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 12:34:59.174 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:40.357 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:41.244 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:42.100 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:42.932 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:43.685 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:44.442 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:45.181 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:45.965 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:46.701 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:47.425 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:48.162 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:48.860 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:49.735 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:50.436 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:51.130 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-12 15:30:52.054 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-12 15:45:19.016 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-12 15:45:29.428 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-12 16:16:29.342 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-12 16:16:59.235 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-12 16:22:44.552 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-12 16:23:01.192 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-12 16:30:02.790 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-12 16:30:07.940 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-12 22:44:03.361 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-12 22:44:05.392 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[ERROR] 2023-09-12 23:27:50.067 [main] Log - no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69f8c0c3288c2ffeeb8e42074ec1aafa, get {url=https://dsportalapp.herokuapp.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50076}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50076/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69f8c0c3288c2ffeeb8e42074ec1aafa
+[INFO ] 2023-09-13 08:52:44.775 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-13 08:52:53.094 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-13 11:09:04.529 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-13 11:09:07.701 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] 2023-09-13 14:35:43.749 [main] Log - User navigates to LMS Home Page
+[ERROR] 2023-09-13 14:35:47.498 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver
+[ERROR] 2023-09-13 22:06:43.341 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-13 22:06:44.331 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-13 22:06:45.247 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-13 22:06:46.183 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-13 22:06:47.000 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-13 22:06:47.779 [main] AllureLifecycle - Could not add attachment: no test is running
+[ERROR] 2023-09-14 08:13:46.861 [main] Log - Error communicating with the remote browser. It may have died.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6c766164c4bdcbc5ac1127fbceb8f959, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51727/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c766164c4bdcbc5ac1127fbceb8f959
+[INFO ] 2023-09-14 11:29:24.751 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-14 11:29:24.856 [main] Log - Verified that user is on LMS Home Page
+[ERROR] 2023-09-14 11:30:14.947 [main] Log - no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=116.0.5845.187)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6d02874796f4867f1f7dacd63084390, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54356/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6d02874796f4867f1f7dacd63084390
+[ERROR] 2023-09-14 11:30:16.504 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-14 11:30:16.903 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-14 11:30:16.912 [main] Log - Verified that user is on LMS Home Page
+[ERROR] 2023-09-14 11:31:06.956 [main] Log - no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=116.0.5845.187)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6d02874796f4867f1f7dacd63084390, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/pp/p_4g4ntn2qg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54356/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6d02874796f4867f1f7dacd63084390
+[ERROR] 2023-09-14 11:31:08.152 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-09-14 11:31:08.851 [main] Log - User navigates to LMS Home Page
+[INFO ] 2023-09-14 11:31:08.863 [main] Log - Verified that user is on LMS Home Page
+[ERROR] 2023-09-14 11:31:37.289 [main] Log - Unable to find element with locator By.xpath: //a[text()='Login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '17.0.3'
+Driver info: driver.version: RemoteWebDriver

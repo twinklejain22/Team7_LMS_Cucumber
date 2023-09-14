@@ -30,7 +30,8 @@ public class Login {
 		homePage = testContext.getPageObjectManager().getHomePage();
 		loginPage = testContext.getPageObjectManager().getLoginPage();
 		dashboardPage = testContext.getPageObjectManager().getDashboardPage();
-		loginExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("program");
+		
+		loginExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("login");
 	}
 	
 	@Given("Admin is in home page")
@@ -82,6 +83,20 @@ public class Login {
 		try
 		{
 			loginPage.VerifyLoginHeader();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@Then("Admin should see right spellings in all fields")
+	public void admin_should_see_right_spellings_in_all_fields() 
+	{
+		try
+		{
+			loginPage.VerifyAllSpellings();
 		}
 		catch(Exception ex)
 		{
@@ -231,28 +246,14 @@ public class Login {
 			Assert.fail();
 		}
 	}
-
-	@Given("Admin is in login page")
-	public void admin_is_in_login_page() 
+	
+	@When("Admin logs in with username password combination from {string}")
+	public void admin_logs_in_with_username_password_combination_from(String key) 
 	{
 		try
 		{
-			loginPage.VerifyLoginPage();
-		}
-		catch(Exception ex)
-		{
-			Log.error(ex.getMessage());
-			Assert.fail();
-		}
-	}
-
-	@When("Admin enter valid credentials and clicks login button")
-	public void admin_enter_valid_credentials_and_clicks_login_button() 
-	{
-		try
-		{
-			String userName = loginExcelData.get("Login_Valid").get("username");
-			String password = loginExcelData.get("Login_Valid").get("password");
+			String userName = loginExcelData.get(key).get("username");
+			String password = loginExcelData.get(key).get("password");
 			loginPage.Login(userName, password);
 		}
 		catch(Exception ex)
@@ -262,8 +263,59 @@ public class Login {
 		}
 	}
 
-	@Then("Admin should land on dashboard page")
-	public void admin_should_land_on_dashboard_page() 
+	@Then("Admin should land on dashboard page or see error based on {string}")
+	public void admin_should_land_on_dashboard_page_or_see_error_based_on(String key) 
+	{
+		try
+		{
+			if(key.equals("Login_Valid"))
+				dashboardPage.VerifyDashboardPage();
+			else
+				loginPage.VerifyErrorMessage(loginExcelData.get(key).get("errormessage"));
+				
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Given("Admin is on login page")
+	public void admin_is_on_login_page() 
+	{
+		try
+		{
+			homePage.GoToHomePage();
+			homePage.VerifyHomePage();
+			homePage.ClickOnLoginBtn();
+			loginPage.VerifyLoginPage();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@When("Admin enter valid credentials  and clicks login button through keyboard")
+	public void admin_enter_valid_credentials_and_clicks_login_button_through_keyboard() 
+	{
+		try
+		{
+			String userName = loginExcelData.get("Login_Valid").get("username");
+			String password = loginExcelData.get("Login_Valid").get("password");
+			loginPage.LoginUsingKeyboard(userName, password);
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+	}
+
+	@Then("Admin should go to on dashboard page")
+	public void admin_should_go_to_on_dashboard_page() 
 	{
 		try
 		{
@@ -275,6 +327,4 @@ public class Login {
 			Assert.fail();
 		}
 	}
-
-
 }

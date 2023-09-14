@@ -27,6 +27,7 @@ public class UserPageValidation {
 	UserPage userPage;
 	
 	public static HashMap<String, HashMap<String, String>> loginExcelData;
+	public static HashMap<String, HashMap<String, String>> userExcelData;
 	
 	public UserPageValidation(TestContext context)
 	{
@@ -37,7 +38,8 @@ public class UserPageValidation {
 		paginationPage = testContext.getPageObjectManager().getPaginationPage();
 		userPage = testContext.getPageObjectManager().getUserPage();
 		
-		loginExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("program");
+		userExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("user");
+		loginExcelData = FileReaderManager.getInstance().getExcelReader().ReadExcelFile("login");
 	}
 	
 	@Given("Admin is on dashboard page after Login")
@@ -234,7 +236,7 @@ public class UserPageValidation {
 	{
 		try
 		{
-			userPage.ClickAddUserBtnPresent();
+			userPage.ClickAddUserBtn();
 		}
 		catch(Exception ex)
 		{
@@ -246,7 +248,18 @@ public class UserPageValidation {
 	@Then("A new pop up with User details appears")
 	public void a_new_pop_up_with_user_details_appears() 
 	{
+<<<<<<< HEAD
 	    
+=======
+		try
+		{
+			userPage.VerifyUserDetailsPopUpOpen();
+		}
+		catch(Exception ex)
+		{
+			Log.error(ex.getMessage());
+			Assert.fail();
+		}
+>>>>>>> 98bb455cde927b3f4953ec94f08a9490074418af
 	}
-
 }
